@@ -50,23 +50,23 @@ Rating csv contains floating and intergers.
 
 Movie csv contain intergers and object
 
- ## 5 .Exploratory Data Analysis
+ ## 2.Exploratory Data Analysis
  Most ratings cluster between 3.0–4.5, indicating a positive bias
 
  Distributions are heavily right-skewed — a small number of 'power users and blockbuster movies dominate. This is the long-tail problem.'
 
  Drama+Romance and Comedy+Romance are the most frequent genre pairings
 
- ## 7.Model Comparison  KNNBasic vs SVD 
+ ## 3.Model Comparison  KNNBasic vs SVD 
 
 | Model | Type | Description |
 |---|---|---|
 | KNNBasic | Memory-based | Finds similar items via cosine similarity; interpretable but slow at scale |
 | SVD | Model-based | Matrix factorisation; fast, scalable, handles sparsity well |
 
-## 8.Hyperparameter Tuning with GridSearchCV on SVD
+## 4.Hyperparameter Tuning with GridSearchCV on SVD
 
-## 9. Evaluation: Precision@K & Recall@K
+## 5. Evaluation: Precision@K & Recall@K
 
 RMSE and MAE measure rating accuracy, but for a Top-5 recommendation task, **Precision@K** and **Recall@K** are more business-relevant:
 
@@ -75,7 +75,7 @@ RMSE and MAE measure rating accuracy, but for a Top-5 recommendation task, **Pre
 
 A model can have low RMSE yet still rank irrelevant movies in the top 5.
 
-##  11. Cold-Start Problem & Hybrid Solution
+##  6. Cold-Start Problem & Hybrid Solution
 
 | Scenario | Problem | Impact |
 |---|---|---|
@@ -84,7 +84,7 @@ A model can have low RMSE yet still rank irrelevant movies in the top 5.
 
 **Strategy:** when a user has fewer than 5 ratings, fall back to **content-based filtering** (TF-IDF on genres). Once sufficient ratings accumulate, switch to the trained SVD model.
  
- ## 13. Conclusion
+ ## 7. Conclusion
 
 ### Summary
 This project built a hybrid movie recommendation system on the MovieLens dataset. Two collaborative filtering algorithms (KNNBasic, SVD) were benchmarked with 5-fold cross-validation. SVD was selected for hyperparameter tuning due to its balance of accuracy and scalability.
