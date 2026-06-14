@@ -1,7 +1,6 @@
-# Python
+# Python cache
 __pycache__/
 *.py[cod]
-*$py.class
 
 # Virtual environments
 venv/
@@ -9,7 +8,7 @@ env/
 .venv/
 learn-env/
 
-# Jupyter Notebook checkpoints
+# Jupyter
 .ipynb_checkpoints/
 
 # VS Code
@@ -21,9 +20,10 @@ learn-env/
 # MacOS
 .DS_Store
 
-# Data files (optional if datasets are large)
-ratings.csv
-movies.csv
+# Large exports (IMPORTANT)
+*.pdf
+*.pptx
+*.html
 
 # Model files
 *.pkl
@@ -34,10 +34,5 @@ movies.csv
 
 # Environment variables
 .env
-
-# Build artifacts
-build/
-dist/
-*.egg-info/
 
 
